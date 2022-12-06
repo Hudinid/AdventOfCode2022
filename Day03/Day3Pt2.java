@@ -1,38 +1,37 @@
-package AdventOfCode2022.Day3;
+package Day03;
 
 
 import java.io.*;
 import java.util.*;
 
-public class Day3pt1 {
+public class Day3Pt2 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         PrintWriter pw = new PrintWriter(new OutputStreamWriter(System.out));
         ArrayList<Character> sameChars = new ArrayList<>();
 
-        for(int i = 0; i < 300; i ++) {
+        for(int i = 0; i < 100; i ++) {
             String itemStuff = br.readLine();
-
-            String firstHalf = itemStuff.substring(0, itemStuff.length() / 2);
-            String secondHalf = itemStuff.substring(itemStuff.length() / 2);
-
+            String itemStuff2 = br.readLine();
+            String itemStuff3 = br.readLine();
+            
             ArrayList<Character> alrAdded = new ArrayList<>();
-            for(int j = 0; j < firstHalf.length(); j ++) {
-                if(secondHalf.contains(firstHalf.substring(j, j+1))) {
-                    if(!alrAdded.contains(firstHalf.charAt(j))) {
-                        sameChars.add(firstHalf.charAt(j));
-                        alrAdded.add(firstHalf.charAt(j));
+            
+            for(int j = 0; j < itemStuff.length(); j ++) {
+                if(itemStuff2.contains(itemStuff.substring(j, j + 1)) && itemStuff3.contains(itemStuff.substring(j, j+1))) {
+                    if(!alrAdded.contains(itemStuff.charAt(j))){
+                        sameChars.add(itemStuff.charAt(j));
+                        alrAdded.add(itemStuff.charAt(j));
                     }
                 }
             }
 
-            //aabbcc
+            
         }
         long sum = 0;
         for(int i = 0; i < sameChars.size(); i ++) {
             Character currentChar = sameChars.get(i);
-            // System.out.println(currentChar);
-
+            
             
             if(Character.isLowerCase(currentChar)) {
                 sum += (int)(currentChar) - 96;

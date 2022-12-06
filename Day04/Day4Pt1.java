@@ -1,4 +1,4 @@
-package AdventOfCode2022.Day4;
+package Day04;
 
 import java.io.*;
 import java.util.*;

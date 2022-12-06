@@ -1,4 +1,4 @@
-package AdventOfCode2022.Day2;
+package Day02;
 import java.io.*;
 import java.util.*;
 public class Day2Pt1 {
