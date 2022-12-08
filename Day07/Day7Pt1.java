@@ -42,18 +42,15 @@ public class Day7Pt1 {
         
         long ret = 0;
         
-        long sum1 = directoryTravel.get(0).getSum();
+       directoryTravel.get(0).getSum();
         
-        long allAdded = 0;
+        
         Collections.sort(sums);
 
         for(int i = 0; i < sums.size(); i ++) {
             if(sums.get(i) < 100000) { 
                 ret += sums.get(i);
             }
-        }
-        for(int i = 0; i < sums.size(); i ++) {
-            allAdded += sums.get(i);
         }
 
 
