@@ -20,19 +20,22 @@ public class Day10Pt2 {
         for(int i = 0; i < n; i ++) {
             String[] line = br.readLine().split(" "); 
             
-            
+            // if(cyclesCompleted%40 == 0) {
+            //     modifier += 40;
+            // }
             // System.out.println();
-            // System.out.println("------");
-            // System.out.println("CurrCycle Diff: " + Math.abs((cyclesCompleted-1) - value));
-            // System.out.println("Pixel Spot:" + (cyclesCompleted-1));
-            // System.out.println("CurrValue: " + value);
+            
 
             if(line[0].equals("noop")) {
                 // if(cyclesCompleted % modCheck == 0) {
                 //     numbers.add(value * cyclesCompleted);
                 //     modCheck += 40;
-                // }
-                if(cyclesCompleted%40 == 0) {
+                // }S
+                System.out.println("------");
+                System.out.println("CurrCycle Diff: " + Math.abs((cyclesCompleted-1) - value - modifier));
+                System.out.println("Pixel Spot:" + (cyclesCompleted-1));
+                System.out.println("CurrValue: " + value);
+                if(cyclesCompleted%40 == 1 && cyclesCompleted != 1) {
                     modifier += 40;
                 }
                 if(Math.abs((cyclesCompleted-1) - value - modifier) < 2) {
@@ -52,7 +55,12 @@ public class Day10Pt2 {
                 //     numbers.add(value * cyclesCompleted);
                     // modCheck += 40;
                 // }
-                if(cyclesCompleted%40 == 0) {
+                System.out.println("------");
+                System.out.println("CurrCycle Diff: " + Math.abs((cyclesCompleted-1) - value - modifier));
+                System.out.println("Pixel Spot:" + (cyclesCompleted-1));
+                System.out.println("CurrValue: " + value);
+
+                if(cyclesCompleted%40 == 1 && cyclesCompleted != 1) {
                     modifier += 40;
                 }
                 if(Math.abs((cyclesCompleted-1) - value - modifier) < 2) {
