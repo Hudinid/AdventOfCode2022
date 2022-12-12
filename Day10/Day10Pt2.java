@@ -7,7 +7,7 @@ public class Day10Pt2 {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         PrintWriter pw  = new PrintWriter(new OutputStreamWriter(System.out));
 
-        int n = 139; // num of Lines;
+        int n = 137; // num of Lines;
 
         int cyclesCompleted = 1;
         int value = 1;
@@ -31,10 +31,10 @@ public class Day10Pt2 {
                 //     numbers.add(value * cyclesCompleted);
                 //     modCheck += 40;
                 // }S
-                System.out.println("------");
-                System.out.println("CurrCycle Diff: " + Math.abs((cyclesCompleted-1) - value - modifier));
-                System.out.println("Pixel Spot:" + (cyclesCompleted-1));
-                System.out.println("CurrValue: " + value);
+                // System.out.println("------");
+                // System.out.println("CurrCycle Diff: " + Math.abs((cyclesCompleted-1) - value - modifier));
+                // System.out.println("Pixel Spot:" + (cyclesCompleted-1));
+                // System.out.println("CurrValue: " + value);
                 if(cyclesCompleted%40 == 1 && cyclesCompleted != 1) {
                     modifier += 40;
                 }
@@ -55,10 +55,10 @@ public class Day10Pt2 {
                 //     numbers.add(value * cyclesCompleted);
                     // modCheck += 40;
                 // }
-                System.out.println("------");
-                System.out.println("CurrCycle Diff: " + Math.abs((cyclesCompleted-1) - value - modifier));
-                System.out.println("Pixel Spot:" + (cyclesCompleted-1));
-                System.out.println("CurrValue: " + value);
+                // System.out.println("------");
+                // System.out.println("CurrCycle Diff: " + Math.abs((cyclesCompleted-1) - value - modifier));
+                // System.out.println("Pixel Spot:" + (cyclesCompleted-1));
+                // System.out.println("CurrValue: " + value);
 
                 if(cyclesCompleted%40 == 1 && cyclesCompleted != 1) {
                     modifier += 40;
